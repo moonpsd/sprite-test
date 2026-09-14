@@ -769,10 +769,598 @@ resetCalculator.addEventListener(
   }
 );
 
+// ======================================================
+// SPRITESHEET — MARCAS + PEÇAS SELECIONADAS
+// ======================================================
+
 
 // ======================================================
-// INICIA
+// MARCAS
 // ======================================================
+
+const selectedBrands = [
+
+  {
+    name: 'Mowalola',
+    url: 'https://charlesking77.x.yupoo.com/categories/4893194',
+    img: 'https://www.google.com/url?sa=t&source=web&rct=j&url=https%3A%2F%2Fwww.redbubble.com%2Fi%2Fsticker%2FMowalola-Logo-by-markashxx%2F77185693%2F7sgk&ved=0CBYQjRxqFwoTCNjD4trf7pYDFQAAAAAdAAAAABBo&opi=89978449'
+  },
+
+  {
+    name: 'MM6',
+    url: 'https://charlesking77.x.yupoo.com/categories/4797743',
+    img: 'https://www.google.com/url?sa=t&source=web&rct=j&url=https%3A%2F%2Fcommons.wikimedia.org%2Fwiki%2FFile%3AMaison_margiela-corporate_logo_2015.jpg&ved=0CBYQjRxqFwoTCICBy-Pf7pYDFQAAAAAdAAAAABBq&opi=89978449'
+  },
+
+  {
+    name: 'Off-White',
+    url: 'https://huskyreps.x.yupoo.com/categories/5003280',
+    img: 'https://www.google.com/url?sa=t&source=web&rct=j&url=https%3A%2F%2Fseeklogo.com%2Fvector-logo%2F361774%2Foff-white&ved=0CBYQjRxqFwoTCPitnenf7pYDFQAAAAAdAAAAABBq&opi=89978449'
+  },
+
+  {
+    name: 'Bape',
+    url: 'https://huskyreps.x.yupoo.com/categories/4990377',
+    img: 'https://i.pinimg.com/736x/94/2b/ea/942bea52708468e31176da909a593137.jpg'
+  },
+
+  {
+    name: 'Under Armour',
+    url: 'https://huskyreps.x.yupoo.com/categories/5003178',
+    img: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Under_armour_logo.svg/1280px-Under_armour_logo.svg.png'
+  },
+
+  {
+    name: 'Y-3',
+    url: 'https://huskyreps.x.yupoo.com/categories/5003174',
+    img: 'https://1000logos.net/wp-content/uploads/2021/06/Y-3-logo.png'
+  },
+
+  {
+    name: 'Balenciaga',
+    url: 'https://huskyreps.x.yupoo.com/categories/5015334',
+    img: 'https://logolook.net/wp-content/uploads/2022/06/Balenciaga-Logo.png'
+  },
+
+  {
+    name: 'ERD',
+    url: 'https://huskyreps.x.yupoo.com/categories/4990335',
+    img: 'https://cms.showstudio.com/images/4OAvxb_cXtr_y0rdZ8TGjs0nfkc=/401907/width-1280%7Cformat-jpeg/ERD_RICHES_LOGO.png'
+  },
+
+  {
+    name: 'Chrome Hearts',
+    url: 'https://huskyreps.x.yupoo.com/categories/5003255',
+    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnl7KUHVGPUiWKaIbn1O1X6UcMPSQ29ZESqvC0hIesjw&s=10'
+  },
+
+  {
+    name: 'Adidas',
+    url: 'https://huskyreps.x.yupoo.com/categories/5003171',
+    img: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/20/Adidas_Logo.svg/1280px-Adidas_Logo.svg.png'
+  },
+
+  {
+    name: "Arc'teryx",
+    url: 'https://alaskareps.x.yupoo.com/categories/5093778',
+    img: 'https://upload.wikimedia.org/wikipedia/en/7/72/ARC%27TERYX_logo.svg'
+  },
+
+  {
+    name: 'Supreme',
+    url: 'https://huskyreps.x.yupoo.com/categories/5003221',
+    img: 'https://thumb.wikimedia.org/wikipedia/commons/thumb/2/28/Supreme_Logo.svg/960px-Supreme_Logo.svg.png'
+  },
+
+  {
+    name: 'CDG',
+    url: 'https://huskyreps.x.yupoo.com/categories/4990364',
+    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRv3yyfV5RvjQSim81wUjK_loetr11ez_jOjGu0yyIHw&s=10'
+  }
+
+];
+
+
+// ======================================================
+// TÊNIS / BOTAS
+// ======================================================
+//
+// PARA COLOCAR UMA FOTO MANUAL:
+// img: './img/nome-da-foto.jpg'
+//
+// Se "img" não existir, o site tenta buscar automaticamente.
+// ======================================================
+
+const selectedShoes = [
+
+  {
+    name: 'Nike Foamposite One Pro Tianjin 2.0',
+    brand: 'Nike',
+    url: 'https://cf1688.x.yupoo.com/albums/243361378?uid=1',
+    img: './img/s-l1200.png'
+  },
+
+  {
+    name: 'OFFGOD x AD Originals Superstar 82',
+    brand: 'Adidas / OFFGOD',
+    url: 'https://shop383280.v.weidian.com/item.html?itemID=7483027991&spider_token=18fc',
+    img: './img/off.png'
+  },
+
+  {
+    name: 'Balenciaga Venom Low | High',
+    brand: 'Balenciaga',
+    url: 'https://shop244820485.v.weidian.com/item.html?adsk=&spider_token=39e7&wfr=shop&ifr=shopdetail&itemID=7555688576',
+    img: './img/venom.png'
+  },
+
+  {
+    name: 'Maison Margiela Future High',
+    brand: 'Maison Margiela',
+    url: 'https://anontop.x.yupoo.com/albums/219715263?uid=1&isSubCate=false&referrercate=4744896',
+    img: './img/future.png'
+  },
+
+  {
+    name: 'Rick Owens Geo Basket Full Black',
+    brand: 'Rick Owens',
+    url: 'https://yolo66.x.yupoo.com/albums/226967464?uid=1&isSubCate=false&referrercate=4768472',
+    img: './img/geo.png'
+  },
+
+  {
+    name: 'Rick Owens Distressed Twill Sneakers — Pink',
+    brand: 'Rick Owens',
+    url: 'https://yolo66.x.yupoo.com/albums/226967277?uid=1&isSubCate=false&referrercate=4768472',
+    img: './img/pink.png'
+  },
+
+  {
+    name: 'Balenciaga Stomper',
+    brand: 'Balenciaga',
+    url: 'https://shop1648171445.v.weidian.com/item.html?itemID=7315040208&spider_token=279f',
+    img: './img/stomper.png'
+  },
+
+  {
+    name: 'Balenciaga Defender',
+    brand: 'Balenciaga',
+    url: 'https://anontop.x.yupoo.com/albums/245920117?uid=1&isSubCate=false&referrercate=4728813',
+    img: './img/defender.png'
+  },
+
+  {
+    name: 'Balenciaga Runner 7.0',
+    brand: 'Balenciaga',
+    url: 'https://anontop.x.yupoo.com/albums/192031745?uid=1&isSubCate=false&referrercate=4728813',
+    img: './img/runner.png'
+  },
+
+  {
+    name: 'Balenciaga Alaska Nylon',
+    brand: 'Balenciaga',
+    url: 'https://anontop.x.yupoo.com/albums/252925913?uid=1&isSubCate=false&referrercate=4728813',
+    img: './img/alaska.png'
+  },
+
+  {
+    name: 'Balenciaga 3XL',
+    brand: 'Balenciaga',
+    url: 'https://anontop.x.yupoo.com/albums/184655601?uid=1&isSubCate=false&referrercate=4728813',
+    img: './img/3xl.png'
+  },
+
+  {
+    name: 'YSL PARIS',
+    brand: 'Saint Laurent',
+    url: 'https://anontop.x.yupoo.com/albums/251114093?uid=1&isSubCate=false&referrercate=4728804',
+    img: './img/ysl.png'
+  },
+
+  {
+    name: 'Christian Louboutin Louis Spikes',
+    brand: 'Christian Louboutin',
+    url: 'https://pai-reps.x.yupoo.com/albums/201257655?uid=1&isSubCate=false&referrercate=4306904&page=3',
+    img: './img/loubotin.png'
+  },
+
+  {
+    name: 'Dirk Bikkembergs',
+    brand: 'Dirk Bikkembergs',
+    url: 'https://shop982822976.v.weidian.com/item.html?itemId=7555167441&vc_cps_track=1459920903_0_0',
+    img: './img/dirk.png'
+  }
+
+];
+
+
+// ======================================================
+// IMAGEM AUTOMÁTICA
+// ======================================================
+//
+// Só é usada quando o produto NÃO possui "img" manual.
+// ======================================================
+
+function getPageImage(url) {
+
+  return (
+    'https://api.microlink.io/?url=' +
+    encodeURIComponent(url) +
+    '&embed=image.url'
+  );
+
+}
+
+
+// ======================================================
+// FALLBACK
+// ======================================================
+//
+// Se a imagem manual ou automática falhar,
+// esta imagem será exibida.
+// Recomendo criar:
+// ./img/fallback.jpg
+// ======================================================
+
+const selectedFallbackImage =
+  './img/fallback.jpg';
+
+
+// ======================================================
+// ELEMENTOS
+// ======================================================
+
+const brandCards =
+  document.querySelector('#brandCards');
+
+const shoeCards =
+  document.querySelector('#shoeCards');
+
+
+// ======================================================
+// ESCAPE HTML
+// ======================================================
+
+function escapeHTML(text) {
+
+  return String(text)
+
+    .replaceAll('&', '&amp;')
+
+    .replaceAll('<', '&lt;')
+
+    .replaceAll('>', '&gt;')
+
+    .replaceAll('"', '&quot;')
+
+    .replaceAll("'", '&#039;');
+
+}
+
+
+// ======================================================
+// CRIA CARD
+// ======================================================
+
+function createSpecialCard(item, index, type) {
+
+  const number =
+    String(index + 1)
+      .padStart(2, '0');
+
+
+  const category =
+    type === 'brand'
+      ? 'Marca'
+      : item.brand;
+
+
+  const badge =
+    type === 'brand'
+      ? 'Brand'
+      : 'Footwear';
+
+
+  const button =
+    type === 'brand'
+      ? 'Ver marca'
+      : 'Ver produto';
+
+
+  // ====================================================
+  // MARCAS — APENAS TEXTO
+  // ====================================================
+
+  if (type === 'brand') {
+
+    return `
+      <article
+        class="special-card brand-text-card"
+        data-special-tilt
+      >
+
+        <div class="brand-text-area">
+
+          <span class="special-number">
+            ${number}
+          </span>
+
+          <span class="special-type">
+            BRAND
+          </span>
+
+          <h4 class="brand-big-name">
+            ${escapeHTML(item.name)}
+          </h4>
+
+        </div>
+
+
+        <div class="special-body">
+
+          <span class="special-category">
+            SPRITESHEET / BRAND
+          </span>
+
+          <a
+            class="special-link"
+            href="${item.url}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            <span>
+              Ver marca
+            </span>
+
+            <span>
+              ↗
+            </span>
+
+          </a>
+
+        </div>
+
+      </article>
+    `;
+
+  }
+
+
+  // ====================================================
+  // CALÇADOS
+  // ====================================================
+  //
+  // PRIMEIRO tenta usar item.img.
+  //
+  // Exemplo:
+  // img: './img/balenciaga-3xl.jpg'
+  //
+  // Se não existir, tenta buscar automaticamente.
+  // ====================================================
+
+  const image =
+    item.img ||
+    getPageImage(item.url);
+
+
+  return `
+    <article
+      class="special-card"
+      data-special-tilt
+    >
+
+      <div class="special-media">
+
+        <img
+          src="${image}"
+          alt="${escapeHTML(item.name)}"
+          loading="lazy"
+          draggable="false"
+          referrerpolicy="no-referrer"
+
+          onerror="
+            this.onerror=null;
+            this.src='${selectedFallbackImage}';
+          "
+        >
+
+        <span class="special-number">
+          ${number}
+        </span>
+
+        <span class="special-type">
+          ${badge}
+        </span>
+
+      </div>
+
+
+      <div class="special-body">
+
+        <span class="special-category">
+          ${escapeHTML(category)}
+        </span>
+
+        <h4 class="special-title">
+          ${escapeHTML(item.name)}
+        </h4>
+
+        <a
+          class="special-link"
+          href="${item.url}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+
+          <span>
+            ${button}
+          </span>
+
+          <span>
+            ↗
+          </span>
+
+        </a>
+
+      </div>
+
+    </article>
+  `;
+
+}
+
+
+// ======================================================
+// RENDER MARCAS
+// ======================================================
+
+function renderSelectedBrands() {
+
+  if (!brandCards) return;
+
+  brandCards.innerHTML =
+    selectedBrands
+
+      .map(
+        (brand, index) =>
+          createSpecialCard(
+            brand,
+            index,
+            'brand'
+          )
+      )
+
+      .join('');
+
+}
+
+
+// ======================================================
+// RENDER CALÇADOS
+// ======================================================
+
+function renderSelectedShoes() {
+
+  if (!shoeCards) return;
+
+  shoeCards.innerHTML =
+    selectedShoes
+
+      .map(
+        (shoe, index) =>
+          createSpecialCard(
+            shoe,
+            index,
+            'shoe'
+          )
+      )
+
+      .join('');
+
+}
+
+
+// ======================================================
+// EFEITO 3D — CARDS SELECIONADOS
+// ======================================================
+
+function attachSpecialTilt() {
+
+  const specialCards =
+    document.querySelectorAll(
+      '[data-special-tilt]'
+    );
+
+
+  specialCards.forEach(card => {
+
+    card.addEventListener(
+      'mousemove',
+      event => {
+
+        const rect =
+          card.getBoundingClientRect();
+
+
+        const x =
+          (
+            event.clientX -
+            rect.left
+          ) /
+          rect.width -
+          0.5;
+
+
+        const y =
+          (
+            event.clientY -
+            rect.top
+          ) /
+          rect.height -
+          0.5;
+
+
+        const rotateX =
+          -y * 6;
+
+
+        const rotateY =
+          x * 8;
+
+
+        card.style.transform = `
+          perspective(900px)
+          rotateX(${rotateX}deg)
+          rotateY(${rotateY}deg)
+          translateY(-6px)
+          scale(1.015)
+        `;
+
+      }
+    );
+
+
+    card.addEventListener(
+      'mouseleave',
+      () => {
+
+        card.style.transform = `
+          perspective(900px)
+          rotateX(0deg)
+          rotateY(0deg)
+          translateY(0)
+          scale(1)
+        `;
+
+      }
+    );
+
+  });
+
+}
+
+
+// ======================================================
+// INICIALIZA SEÇÃO DE MARCAS / CALÇADOS
+// ======================================================
+
+function initSelectedSection() {
+
+  renderSelectedBrands();
+
+  renderSelectedShoes();
+
+  attachSpecialTilt();
+
+}
+
+
+// ======================================================
+// INICIALIZA SITE
+// ======================================================
+
+initSelectedSection();
 
 calculateImport();
 
