@@ -215,6 +215,21 @@ const catalog = [
     extra: 'Destaque de batch'
   },
 
+    {
+    name: '007 Shop',
+    cat: 'sneakers',
+    url: 'https://shop383280.v.weidian.com/?userid=383280&spider_token=bf2f',
+    extra: 'Destaque de batch'
+  },
+
+  {
+    name: 'CF',
+    cat: 'sneakers',
+    url: 'https://cf1688.x.yupoo.com/albums',
+    extra: 'Destaque de batch'
+  },
+
+
   // =========================
   // ACESSÓRIOS
   // =========================
