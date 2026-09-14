@@ -69,6 +69,371 @@
       <div id="empty" class="empty" hidden>Nenhum item encontrado.</div>
     </section>
 
+    <section class="import-section" id="calculadora">
+
+  <div class="import-header">
+    <span class="section-kicker">SPRITESHEET TOOLS</span>
+    <h2>Calculadora de Importação</h2>
+    <p>
+      Faça uma estimativa dos custos da sua compra antes de importar.
+    </p>
+  </div>
+
+
+  <div class="import-steps">
+
+    <!-- ETAPA 01 -->
+    <article class="import-step">
+
+      <div class="step-number">01</div>
+
+      <div class="step-content">
+
+        <span class="step-label">COMPRA NA CHINA</span>
+
+        <h3>Valor inicial do produto</h3>
+
+        <p>
+          Primeiro você paga o produto, o frete interno da China
+          e possíveis taxas cobradas na compra.
+        </p>
+
+        <div class="formula">
+          Produto + Frete China + Taxas + Opcionais
+        </div>
+
+      </div>
+
+    </article>
+
+
+    <!-- ETAPA 02 -->
+    <article class="import-step">
+
+      <div class="step-number">02</div>
+
+      <div class="step-content">
+
+        <span class="step-label">WAREHOUSE</span>
+
+        <h3>Frete internacional</h3>
+
+        <p>
+          Quando o produto chegar na warehouse, você terá o peso
+          real e poderá calcular o frete para o Brasil.
+        </p>
+
+        <a
+          href="https://www.cssbuy.com/estimates"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="external-button"
+        >
+          Calculadora de frete CSSBuy
+          <span>↗</span>
+        </a>
+
+      </div>
+
+    </article>
+
+
+    <!-- ETAPA 03 -->
+    <article class="import-step">
+
+      <div class="step-number">03</div>
+
+      <div class="step-content">
+
+        <span class="step-label">IMPOSTOS</span>
+
+        <h3>Estimativa de tributação</h3>
+
+        <p>
+          Adicione a porcentagem estimada de tributação para visualizar
+          o custo final aproximado da importação.
+        </p>
+
+        <div class="formula">
+          Base tributável × % de imposto
+        </div>
+
+      </div>
+
+    </article>
+
+  </div>
+
+
+  <!-- CALCULADORA -->
+
+  <div class="calculator">
+
+    <div class="calculator-top">
+
+      <div>
+        <span class="step-label">ESTIMATIVA</span>
+        <h3>Calcule sua importação</h3>
+      </div>
+
+      <button
+        type="button"
+        class="reset-calculator"
+        id="resetCalculator"
+      >
+        Limpar
+      </button>
+
+    </div>
+
+
+    <div class="calculator-grid">
+
+
+      <!-- VALOR DO PRODUTO -->
+
+      <div class="calc-field">
+
+        <label for="productValue">
+          Valor do produto
+        </label>
+
+        <div class="input-money">
+          <span>R$</span>
+
+          <input
+            type="number"
+            id="productValue"
+            min="0"
+            step="0.01"
+            placeholder="193,47"
+          >
+        </div>
+
+      </div>
+
+
+      <!-- FRETE NA CHINA -->
+
+      <div class="calc-field">
+
+        <label for="chinaShipping">
+          Frete interno na China
+        </label>
+
+        <div class="input-money">
+          <span>R$</span>
+
+          <input
+            type="number"
+            id="chinaShipping"
+            min="0"
+            step="0.01"
+            placeholder="0,00"
+          >
+        </div>
+
+      </div>
+
+
+      <!-- TAXAS CHINESAS -->
+
+      <div class="calc-field">
+
+        <label for="chinaTax">
+          Taxas da compra
+        </label>
+
+        <div class="input-money">
+          <span>R$</span>
+
+          <input
+            type="number"
+            id="chinaTax"
+            min="0"
+            step="0.01"
+            placeholder="0,00"
+          >
+        </div>
+
+      </div>
+
+
+      <!-- OPCIONAIS -->
+
+      <div class="calc-field">
+
+        <label for="extras">
+          Serviços opcionais
+        </label>
+
+        <div class="input-money">
+          <span>R$</span>
+
+          <input
+            type="number"
+            id="extras"
+            min="0"
+            step="0.01"
+            placeholder="0,00"
+          >
+        </div>
+
+      </div>
+
+
+      <!-- FRETE INTERNACIONAL -->
+
+      <div class="calc-field">
+
+        <label for="internationalShipping">
+          Frete China → Brasil
+        </label>
+
+        <div class="input-money">
+          <span>R$</span>
+
+          <input
+            type="number"
+            id="internationalShipping"
+            min="0"
+            step="0.01"
+            placeholder="0,00"
+          >
+        </div>
+
+      </div>
+
+
+      <!-- TAXA -->
+
+      <div class="calc-field">
+
+        <label for="taxPercentage">
+          Estimativa de impostos
+        </label>
+
+        <div class="input-money percentage">
+          <input
+            type="number"
+            id="taxPercentage"
+            min="0"
+            step="0.01"
+            value="92"
+          >
+
+          <span>%</span>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- ESCOLHER BASE -->
+
+    <div class="tax-config">
+
+      <label class="checkbox-line">
+
+        <input
+          type="checkbox"
+          id="taxShipping"
+        >
+
+        <span class="custom-check"></span>
+
+        <span>
+          Incluir frete internacional na base de cálculo dos impostos
+        </span>
+
+      </label>
+
+    </div>
+
+
+    <!-- RESULTADOS -->
+
+    <div class="calc-results">
+
+
+      <div class="result-row">
+
+        <span>Compra na China</span>
+
+        <strong id="chinaTotal">
+          R$ 0,00
+        </strong>
+
+      </div>
+
+
+      <div class="result-row">
+
+        <span>Frete internacional</span>
+
+        <strong id="shippingTotal">
+          R$ 0,00
+        </strong>
+
+      </div>
+
+
+      <div class="result-row">
+
+        <span>Base tributável</span>
+
+        <strong id="taxBase">
+          R$ 0,00
+        </strong>
+
+      </div>
+
+
+      <div class="result-row">
+
+        <span>Impostos estimados</span>
+
+        <strong id="taxTotal">
+          R$ 0,00
+        </strong>
+
+      </div>
+
+
+      <div class="result-divider"></div>
+
+
+      <div class="result-row total">
+
+        <div>
+          <span>CUSTO FINAL ESTIMADO</span>
+          <small>Produto + custos + frete + impostos</small>
+        </div>
+
+        <strong id="grandTotal">
+          R$ 0,00
+        </strong>
+
+      </div>
+
+    </div>
+
+
+    <div class="calculator-warning">
+      <span>!</span>
+
+      <p>
+        Esta ferramenta fornece apenas uma estimativa. Câmbio, impostos,
+        peso volumétrico, taxas da transportadora e regras de importação
+        podem alterar o valor final.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
     <section id="sobre" class="about">
       <div class="about-number">02</div>
       <div>

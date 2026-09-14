@@ -518,4 +518,247 @@ function resetTilt(e) {
 // INICIALIZA
 // ======================================================
 
+// ======================================================
+// CALCULADORA DE IMPORTAÇÃO
+// ======================================================
+
+const productValue =
+  document.querySelector('#productValue');
+
+const chinaShipping =
+  document.querySelector('#chinaShipping');
+
+const chinaTax =
+  document.querySelector('#chinaTax');
+
+const extras =
+  document.querySelector('#extras');
+
+const internationalShipping =
+  document.querySelector('#internationalShipping');
+
+const taxPercentage =
+  document.querySelector('#taxPercentage');
+
+const taxShipping =
+  document.querySelector('#taxShipping');
+
+const resetCalculator =
+  document.querySelector('#resetCalculator');
+
+
+// RESULTADOS
+
+const chinaTotal =
+  document.querySelector('#chinaTotal');
+
+const shippingTotal =
+  document.querySelector('#shippingTotal');
+
+const taxBase =
+  document.querySelector('#taxBase');
+
+const taxTotal =
+  document.querySelector('#taxTotal');
+
+const grandTotal =
+  document.querySelector('#grandTotal');
+
+
+// ======================================================
+// FORMATAÇÃO
+// ======================================================
+
+function formatBRL(value) {
+
+  return value.toLocaleString(
+    'pt-BR',
+    {
+      style: 'currency',
+      currency: 'BRL'
+    }
+  );
+
+}
+
+
+// ======================================================
+// PEGA VALOR DOS INPUTS
+// ======================================================
+
+function getValue(input) {
+
+  const value =
+    parseFloat(input.value);
+
+  return Number.isFinite(value)
+    ? value
+    : 0;
+
+}
+
+
+// ======================================================
+// CALCULA
+// ======================================================
+
+function calculateImport() {
+
+  const product =
+    getValue(productValue);
+
+  const chinaFreight =
+    getValue(chinaShipping);
+
+  const chinaTaxes =
+    getValue(chinaTax);
+
+  const optionalExtras =
+    getValue(extras);
+
+  const internationalFreight =
+    getValue(internationalShipping);
+
+  const percentage =
+    getValue(taxPercentage);
+
+
+  // ------------------------------
+  // ETAPA 01
+  // ------------------------------
+
+  const chinaSubtotal =
+    product +
+    chinaFreight +
+    chinaTaxes +
+    optionalExtras;
+
+
+  // ------------------------------
+  // BASE DOS IMPOSTOS
+  // ------------------------------
+
+  let taxableValue =
+    chinaSubtotal;
+
+
+  if (taxShipping.checked) {
+
+    taxableValue +=
+      internationalFreight;
+
+  }
+
+
+  // ------------------------------
+  // IMPOSTOS
+  // ------------------------------
+
+  const estimatedTax =
+    taxableValue *
+    (percentage / 100);
+
+
+  // ------------------------------
+  // TOTAL FINAL
+  // ------------------------------
+
+  const finalValue =
+    chinaSubtotal +
+    internationalFreight +
+    estimatedTax;
+
+
+  // ------------------------------
+  // MOSTRA NA TELA
+  // ------------------------------
+
+  chinaTotal.textContent =
+    formatBRL(chinaSubtotal);
+
+
+  shippingTotal.textContent =
+    formatBRL(internationalFreight);
+
+
+  taxBase.textContent =
+    formatBRL(taxableValue);
+
+
+  taxTotal.textContent =
+    formatBRL(estimatedTax);
+
+
+  grandTotal.textContent =
+    formatBRL(finalValue);
+
+}
+
+
+// ======================================================
+// ATUALIZA AUTOMATICAMENTE
+// ======================================================
+
+const calculatorInputs = [
+
+  productValue,
+  chinaShipping,
+  chinaTax,
+  extras,
+  internationalShipping,
+  taxPercentage
+
+];
+
+
+calculatorInputs.forEach(input => {
+
+  input.addEventListener(
+    'input',
+    calculateImport
+  );
+
+});
+
+
+taxShipping.addEventListener(
+  'change',
+  calculateImport
+);
+
+
+// ======================================================
+// RESET
+// ======================================================
+
+resetCalculator.addEventListener(
+  'click',
+  () => {
+
+    productValue.value = '';
+
+    chinaShipping.value = '';
+
+    chinaTax.value = '';
+
+    extras.value = '';
+
+    internationalShipping.value = '';
+
+    taxPercentage.value = '92';
+
+    taxShipping.checked = false;
+
+    calculateImport();
+
+  }
+);
+
+
+// ======================================================
+// INICIA
+// ======================================================
+
+calculateImport();
+
 render();
