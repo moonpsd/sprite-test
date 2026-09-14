@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#09070f" />
+  <title>Spritesheet — M.</title>
+  <meta name="description" content="Spritesheet - M." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="./assets/maka-fav.png">
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Spritesheet - início">SPRITESHEET<span>.</span></a>
+    <nav>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#sobre">Sobre</a>
+    </nav>
+    <a class="nav-cta" href="#catalogo">Explorar ↗</a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-image" role="img" aria-label="Banner Spritesheet"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-grid"></div>
+      <div class="hero-content">
+        <p class="eyebrow">CURATED STREETWEAR DIRECTORY / 2026</p>
+        <h1>Sprite<span>sheet</span></h1>
+        <div class="hero-bottom">
+          <a class="hero-btn" href="#catalogo">VER CATÁLOGO <span>↓</span></a>
+        </div>
+      </div>
+      <div class="hero-index">001 — DIRECTORY</div>
+    </section>
+
+    <section class="ticker" aria-hidden="true">
+      <div>SPRITESHEET&nbsp;✦&nbsp; CLOTHING&nbsp;✦&nbsp; SNEAKERS&nbsp;✦&nbsp; ACCESSORIES&nbsp;✦&nbsp; CURATED LINKS&nbsp;✦&nbsp; SPRITESHEET&nbsp;✦&nbsp;</div>
+      <div>SPRITESHEET&nbsp;✦&nbsp; CLOTHING&nbsp;✦&nbsp; SNEAKERS&nbsp;✦&nbsp; ACCESSORIES&nbsp;✦&nbsp; CURATED LINKS&nbsp;✦&nbsp; SPRITESHEET&nbsp;✦&nbsp;</div>
+    </section>
+
+    <section id="catalogo" class="catalog-section">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow purple">DIRECTORY / SELECTED SOURCES</p>
+          <h2>Catálogo</h2>
+        </div>
+        <p class="section-copy">Explore os fornecedores por categoria. Use a busca ou os filtros para encontrar rapidamente o que você procura.</p>
+      </div>
+
+      <div class="catalog-tools">
+        <div class="filters" role="group" aria-label="Filtrar catálogo">
+          <button class="filter active" data-filter="all">Todos</button>
+          <button class="filter" data-filter="roupas">Roupas</button>
+          <button class="filter" data-filter="sneakers">Sneakers</button>
+          <button class="filter" data-filter="acessorios">Acessórios</button>
+        </div>
+        <label class="search-wrap">
+          <span>⌕</span>
+          <input id="search" type="search" placeholder="Buscar no catálogo..." autocomplete="off" />
+        </label>
+      </div>
+
+      <div id="cards" class="catalog-grid"></div>
+      <div id="empty" class="empty" hidden>Nenhum item encontrado.</div>
+    </section>
+
+    <section id="sobre" class="about">
+      <div class="about-number">02</div>
+      <div>
+        <p class="eyebrow purple">ABOUT THE INDEX</p>
+        <h2>Links organizados.<br><span>Visual limpo.</span></h2>
+      </div>
+      <p>Spritesheet funciona como um diretório visual: os cards levam diretamente aos catálogos externos. O site não processa pedidos nem pagamentos.</p>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand" href="#top">SPRITESHEET<span>.</span></a>
+    <p>© 2026 SPRITESHEET — CURATED DIRECTORY</p>
+    <a href="#top">VOLTAR AO TOPO ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
