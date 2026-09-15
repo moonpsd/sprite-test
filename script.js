@@ -229,6 +229,13 @@ const catalog = [
     extra: 'Destaque de batch'
   },
 
+    {
+    name: 'REMAKE',
+    cat: 'sneakers',
+    url: 'https://www.goofish.com/personal?spm=a21ybx.item.itemHeader.1.21823da6h1Ttyh&userId=2200624584244',
+    extra: 'Destaque de batch'
+  },
+
 
   // =========================
   // ACESSÓRIOS
