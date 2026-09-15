@@ -976,9 +976,169 @@ const selectedShoes = [
     brand: 'Dirk Bikkembergs',
     url: 'https://shop982822976.v.weidian.com/item.html?itemId=7555167441&vc_cps_track=1459920903_0_0',
     img: './img/dirk.png'
+  },
+
+  {
+    name: 'Mowalola Timberlands',
+    brand: 'Mowalola x Timberland',
+    url: 'https://www.goofish.com/item?spm=a21ybx.search.searchFeedList.1.e2765ab3wWlHiq&id=997445051387&categoryId=126860479',
+    img: './img/mowalola.png'
+  },
+
+    {
+    name: 'Studded Punk',
+    brand: 'Diesel x Adidas',
+    url: 'https://www.goofish.com/item?spm=a21ybx.item.itemCnxh.1.40383da6Lnkf1Y&id=1075530786107&categoryId=0',
+    img: './img/diesel.png'
   }
 
 ];
+
+// ======================================================
+// TOPS
+// ======================================================
+
+const selectedTops = [
+
+  {
+    name: 'MOWALOLA BOMBER Cheetah',
+    brand: 'Mowalola',
+    url: 'https://www.goofish.com/item?spm=a21ybx.search.searchFeedList.18.3dcf6bd1L265lJ&id=992804416968&categoryId=126920027',
+    img: './img/cheetah.png'
+  },
+
+    {
+    name: 'Y-3 MERCEDES DRIVER',
+    brand: 'Y-3',
+    url: 'https://item.taobao.com/item.htm?ft=t&id=1051957939674',
+    img: './img/beast.png'
+  },
+
+  {
+    name: 'MOWALOLA BOMBER Black',
+    brand: 'Mowalola',
+    url: 'https://weidian.com/item.html?itemID=7801960475',
+    img: './img/mowalola-bomber.png'
+  }
+
+];
+
+const selected = [
+
+  {
+    name: 'Nike Foamposite One Pro Tianjin 2.0',
+    brand: 'Nike',
+    url: 'https://cf1688.x.yupoo.com/albums/243361378?uid=1',
+    img: './img/s-l1200.png'
+  },
+
+  {
+    name: 'OFFGOD x AD Originals Superstar 82',
+    brand: 'Adidas / OFFGOD',
+    url: 'https://shop383280.v.weidian.com/item.html?itemID=7483027991&spider_token=18fc',
+    img: './img/off.png'
+  },
+
+  {
+    name: 'Balenciaga Venom Low | High',
+    brand: 'Balenciaga',
+    url: 'https://shop244820485.v.weidian.com/item.html?adsk=&spider_token=39e7&wfr=shop&ifr=shopdetail&itemID=7555688576',
+    img: './img/venom.png'
+  },
+
+  {
+    name: 'Maison Margiela Future High',
+    brand: 'Maison Margiela',
+    url: 'https://anontop.x.yupoo.com/albums/219715263?uid=1&isSubCate=false&referrercate=4744896',
+    img: './img/future.png'
+  },
+
+  {
+    name: 'Rick Owens Geo Basket Full Black',
+    brand: 'Rick Owens',
+    url: 'https://yolo66.x.yupoo.com/albums/226967464?uid=1&isSubCate=false&referrercate=4768472',
+    img: './img/geo.png'
+  },
+
+  {
+    name: 'Rick Owens Distressed Twill Sneakers — Pink',
+    brand: 'Rick Owens',
+    url: 'https://yolo66.x.yupoo.com/albums/226967277?uid=1&isSubCate=false&referrercate=4768472',
+    img: './img/pink.png'
+  },
+
+  {
+    name: 'Balenciaga Stomper',
+    brand: 'Balenciaga',
+    url: 'https://shop1648171445.v.weidian.com/item.html?itemID=7315040208&spider_token=279f',
+    img: './img/stomper.png'
+  },
+
+  {
+    name: 'Balenciaga Defender',
+    brand: 'Balenciaga',
+    url: 'https://anontop.x.yupoo.com/albums/245920117?uid=1&isSubCate=false&referrercate=4728813',
+    img: './img/defender.png'
+  },
+
+  {
+    name: 'Balenciaga Runner 7.0',
+    brand: 'Balenciaga',
+    url: 'https://anontop.x.yupoo.com/albums/192031745?uid=1&isSubCate=false&referrercate=4728813',
+    img: './img/runner.png'
+  },
+
+  {
+    name: 'Balenciaga Alaska Nylon',
+    brand: 'Balenciaga',
+    url: 'https://anontop.x.yupoo.com/albums/252925913?uid=1&isSubCate=false&referrercate=4728813',
+    img: './img/alaska.png'
+  },
+
+  {
+    name: 'Balenciaga 3XL',
+    brand: 'Balenciaga',
+    url: 'https://anontop.x.yupoo.com/albums/184655601?uid=1&isSubCate=false&referrercate=4728813',
+    img: './img/3xl.png'
+  },
+
+  {
+    name: 'YSL PARIS',
+    brand: 'Saint Laurent',
+    url: 'https://anontop.x.yupoo.com/albums/251114093?uid=1&isSubCate=false&referrercate=4728804',
+    img: './img/ysl.png'
+  },
+
+  {
+    name: 'Christian Louboutin Louis Spikes',
+    brand: 'Christian Louboutin',
+    url: 'https://pai-reps.x.yupoo.com/albums/201257655?uid=1&isSubCate=false&referrercate=4306904&page=3',
+    img: './img/loubotin.png'
+  },
+
+  {
+    name: 'Dirk Bikkembergs',
+    brand: 'Dirk Bikkembergs',
+    url: 'https://shop982822976.v.weidian.com/item.html?itemId=7555167441&vc_cps_track=1459920903_0_0',
+    img: './img/dirk.png'
+  },
+
+  {
+    name: 'Mowalola Timberlands',
+    brand: 'Mowalola x Timberland',
+    url: 'https://www.goofish.com/item?spm=a21ybx.search.searchFeedList.1.e2765ab3wWlHiq&id=997445051387&categoryId=126860479',
+    img: './img/mowalola.png'
+  },
+
+    {
+    name: 'Studded Punk',
+    brand: 'Diesel x Adidas',
+    url: 'https://www.goofish.com/item?spm=a21ybx.item.itemCnxh.1.40383da6Lnkf1Y&id=1075530786107&categoryId=0',
+    img: './img/diesel.png'
+  }
+
+];
+
 
 
 // ======================================================
@@ -1022,6 +1182,9 @@ const brandCards =
 
 const shoeCards =
   document.querySelector('#shoeCards');
+
+const topCards =
+  document.querySelector('#topCards');
 
 
 // ======================================================
@@ -1267,6 +1430,29 @@ function renderSelectedShoes() {
 
 }
 
+// ======================================================
+// RENDER TOPS
+// ======================================================
+
+function renderSelectedTops() {
+
+  if (!topCards) return;
+
+  topCards.innerHTML =
+    selectedTops
+
+      .map(
+        (top, index) =>
+          createSpecialCard(
+            top,
+            index,
+            'shoe'
+          )
+      )
+
+      .join('');
+
+}
 
 // ======================================================
 // EFEITO 3D — CARDS SELECIONADOS
@@ -1358,10 +1544,11 @@ function initSelectedSection() {
 
   renderSelectedShoes();
 
+  renderSelectedTops();
+
   attachSpecialTilt();
 
 }
-
 
 // ======================================================
 // INICIALIZA SITE

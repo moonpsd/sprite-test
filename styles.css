@@ -1658,3 +1658,126 @@ footer > a:last-child {
   }
 
 }
+
+/* ======================================================
+   TOPS — AJUSTE DOS CARDS
+====================================================== */
+
+#topCards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+
+/* CARD */
+
+#topCards .special-card {
+  width: 100%;
+  min-width: 0;
+  height: auto;
+  overflow: hidden;
+}
+
+
+/* ÁREA DA FOTO */
+
+#topCards .special-media {
+  position: relative;
+
+  width: 100%;
+  height: auto;
+
+  aspect-ratio: 4 / 5;
+
+  overflow: hidden;
+
+  background: #0d0d0f;
+}
+
+
+/* FOTO */
+
+#topCards .special-media img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition:
+    transform 0.5s ease,
+    filter 0.5s ease;
+}
+
+
+/* HOVER DA FOTO */
+
+#topCards .special-card:hover .special-media img {
+  transform: scale(1.04);
+}
+
+
+/* CONTEÚDO */
+
+#topCards .special-body {
+  padding: 16px;
+}
+
+
+/* TÍTULO */
+
+#topCards .special-title {
+  margin: 7px 0 14px;
+
+  font-size: 16px;
+  line-height: 1.15;
+
+  overflow-wrap: break-word;
+}
+
+
+/* CATEGORIA */
+
+#topCards .special-category {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+
+/* BOTÃO */
+
+#topCards .special-link {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+/* ======================================================
+   RESPONSIVO
+====================================================== */
+
+@media (max-width: 1000px) {
+
+  #topCards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  #topCards {
+    grid-template-columns: 1fr;
+  }
+
+  #topCards .special-media {
+    aspect-ratio: 4 / 5;
+  }
+
+}

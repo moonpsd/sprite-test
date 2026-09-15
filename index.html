@@ -1,507 +1,428 @@
 <!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#09070f" />
-  <title>Spritesheet — M.</title>
-  <meta name="description" content="Spritesheet - M." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" type="image/png" href="./assets/maka-fav.png">
-</head>
-<body>
-  <div class="noise"></div>
-  <header class="topbar">
-    <a class="brand" href="#top" aria-label="Spritesheet - início">SPRITESHEET<span>.</span></a>
-    <nav>
-      <a href="#catalogo">Catálogo</a>
-      <a href="#sobre">Sobre</a>
-    </nav>
-    <a class="nav-cta" href="#catalogo">Explorar ↗</a>
-  </header>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#09070f" />
+    <title>Spritesheet — M.</title>
+    <meta name="description" content="Spritesheet - M." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="./assets/maka-fav.png" />
+  </head>
+  <body>
+    <div class="noise"></div>
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="Spritesheet - início"
+        >SPRITESHEET<span>.</span></a
+      >
+      <nav>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#sobre">Sobre</a>
+      </nav>
+      <a class="nav-cta" href="#catalogo">Explorar ↗</a>
+    </header>
 
-  <main id="top">
-    <section class="hero">
-      <div class="hero-image" role="img" aria-label="Banner Spritesheet"></div>
-      <div class="hero-overlay"></div>
-      <div class="hero-grid"></div>
-      <div class="hero-content">
-        <p class="eyebrow">CURATED STREETWEAR DIRECTORY / 2026</p>
-        <h1>Sprite<span>sheet</span></h1>
-        <div class="hero-bottom">
-          <a class="hero-btn" href="#catalogo">VER CATÁLOGO <span>↓</span></a>
+    <main id="top">
+      <section class="hero">
+        <div
+          class="hero-image"
+          role="img"
+          aria-label="Banner Spritesheet"
+        ></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-grid"></div>
+        <div class="hero-content">
+          <p class="eyebrow">CURATED STREETWEAR DIRECTORY / 2026</p>
+          <h1>Sprite<span>sheet</span></h1>
+          <div class="hero-bottom">
+            <a class="hero-btn" href="#catalogo">VER CATÁLOGO <span>↓</span></a>
+          </div>
         </div>
-      </div>
-      <div class="hero-index">001 — DIRECTORY</div>
-    </section>
+        <div class="hero-index">001 — DIRECTORY</div>
+      </section>
 
-    <section class="ticker" aria-hidden="true">
-      <div>SPRITESHEET&nbsp;✦&nbsp; CLOTHING&nbsp;✦&nbsp; SNEAKERS&nbsp;✦&nbsp; ACCESSORIES&nbsp;✦&nbsp; CURATED LINKS&nbsp;✦&nbsp; SPRITESHEET&nbsp;✦&nbsp;</div>
-      <div>SPRITESHEET&nbsp;✦&nbsp; CLOTHING&nbsp;✦&nbsp; SNEAKERS&nbsp;✦&nbsp; ACCESSORIES&nbsp;✦&nbsp; CURATED LINKS&nbsp;✦&nbsp; SPRITESHEET&nbsp;✦&nbsp;</div>
-    </section>
-
-    <section id="catalogo" class="catalog-section">
-      <div class="section-head">
+      <section class="ticker" aria-hidden="true">
         <div>
-          <p class="eyebrow purple">DIRECTORY / SELECTED SOURCES</p>
-          <h2>Catálogo</h2>
+          SPRITESHEET&nbsp;✦&nbsp; CLOTHING&nbsp;✦&nbsp; SNEAKERS&nbsp;✦&nbsp;
+          ACCESSORIES&nbsp;✦&nbsp; CURATED LINKS&nbsp;✦&nbsp;
+          SPRITESHEET&nbsp;✦&nbsp;
         </div>
-        <p class="section-copy">Explore os fornecedores por categoria. Use a busca ou os filtros para encontrar rapidamente o que você procura.</p>
-      </div>
-
-      <div class="catalog-tools">
-        <div class="filters" role="group" aria-label="Filtrar catálogo">
-          <button class="filter active" data-filter="all">Todos</button>
-          <button class="filter" data-filter="roupas">Roupas</button>
-          <button class="filter" data-filter="sneakers">Sneakers</button>
-          <button class="filter" data-filter="acessorios">Acessórios</button>
+        <div>
+          SPRITESHEET&nbsp;✦&nbsp; CLOTHING&nbsp;✦&nbsp; SNEAKERS&nbsp;✦&nbsp;
+          ACCESSORIES&nbsp;✦&nbsp; CURATED LINKS&nbsp;✦&nbsp;
+          SPRITESHEET&nbsp;✦&nbsp;
         </div>
-        <label class="search-wrap">
-          <span>⌕</span>
-          <input id="search" type="search" placeholder="Buscar no catálogo..." autocomplete="off" />
-        </label>
-      </div>
+      </section>
 
-      <div id="cards" class="catalog-grid"></div>
-      <div id="empty" class="empty" hidden>Nenhum item encontrado.</div>
-    </section>
+      <section id="catalogo" class="catalog-section">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow purple">DIRECTORY / SELECTED SOURCES</p>
+            <h2>Catálogo</h2>
+          </div>
+          <p class="section-copy">
+            Explore os fornecedores por categoria. Use a busca ou os filtros
+            para encontrar rapidamente o que você procura.
+          </p>
+        </div>
 
-    <section class="curated-section" id="selecionados">
+        <div class="catalog-tools">
+          <div class="filters" role="group" aria-label="Filtrar catálogo">
+            <button class="filter active" data-filter="all">Todos</button>
+            <button class="filter" data-filter="roupas">Roupas</button>
+            <button class="filter" data-filter="sneakers">Sneakers</button>
+            <button class="filter" data-filter="acessorios">Acessórios</button>
+          </div>
+          <label class="search-wrap">
+            <span>⌕</span>
+            <input
+              id="search"
+              type="search"
+              placeholder="Buscar no catálogo..."
+              autocomplete="off"
+            />
+          </label>
+        </div>
 
-  <div class="curated-heading">
-    <span class="curated-eyebrow">SPRITESHEET / SELECTED</span>
+        <div id="cards" class="catalog-grid"></div>
+        <div id="empty" class="empty" hidden>Nenhum item encontrado.</div>
+      </section>
 
-    <h2>Seleção</h2>
+      <section class="curated-section" id="selecionados">
+        <div class="curated-heading">
+          <span class="curated-eyebrow">SPRITESHEET / SELECTED</span>
 
-    <p>
-      Marcas e peças selecionadas.
-    </p>
-  </div>
+          <h2>Seleção</h2>
 
+          <p>Marcas e peças selecionadas.</p>
+        </div>
 
-  <!-- =========================
+        <!-- =========================
        MARCAS
   ========================== -->
 
-  <div class="curated-block">
+        <div class="curated-block">
+          <div class="curated-block-title">
+            <span>01</span>
+            <h3>Marcas</h3>
+          </div>
 
-    <div class="curated-block-title">
-      <span>01</span>
-      <h3>Marcas</h3>
-    </div>
+          <div class="curated-grid brand-grid" id="brandCards"></div>
+        </div>
 
-    <div
-      class="curated-grid brand-grid"
-      id="brandCards"
-    ></div>
-
-  </div>
-
-
-  <!-- =========================
+        <!-- =========================
        CALÇADOS
   ========================== -->
 
-  <div class="curated-block">
+        <div class="curated-block">
+          <div class="curated-block-title">
+            <span>02</span>
+            <h3>Tênis / Botas</h3>
+          </div>
 
-    <div class="curated-block-title">
-      <span>02</span>
-      <h3>Tênis / Botas</h3>
-    </div>
-
-    <div
-      class="curated-grid shoes-grid"
-      id="shoeCards"
-    ></div>
-
-  </div>
-
-</section>
-
-    <section class="import-section" id="calculadora">
-
-  <div class="import-header">
-    <span class="section-kicker">SPRITESHEET TOOLS</span>
-    <h2>Calculadora de Importação</h2>
-    <p>
-      Faça uma estimativa dos custos da sua compra antes de importar.
-    </p>
-  </div>
-
-
-  <div class="import-steps">
-
-    <!-- ETAPA 01 -->
-    <article class="import-step">
-
-      <div class="step-number">01</div>
-
-      <div class="step-content">
-
-        <span class="step-label">COMPRA NA CHINA</span>
-
-        <h3>Valor inicial do produto</h3>
-
-        <p>
-          Primeiro você paga o produto, o frete interno da China
-          e possíveis taxas cobradas na compra.
-        </p>
-
-        <div class="formula">
-          Produto + Frete China + Taxas + Opcionais
+          <div class="curated-grid shoes-grid" id="shoeCards"></div>
         </div>
 
-      </div>
+        <div class="curated-block">
+          <section class="selected-section">
+            <div class="section-heading">
+              <span>SPRITESHEET / SELECTED</span>
+              <h2>TOPS</h2>
+            </div>
 
-    </article>
+            <div class="special-grid" id="topCards"></div>
+          </section>
+        </div>
+      </section>
 
-
-    <!-- ETAPA 02 -->
-    <article class="import-step">
-
-      <div class="step-number">02</div>
-
-      <div class="step-content">
-
-        <span class="step-label">WAREHOUSE</span>
-
-        <h3>Frete internacional</h3>
-
-        <p>
-          Quando o produto chegar na warehouse, você terá o peso
-          real e poderá calcular o frete para o Brasil.
-        </p>
-
-        <a
-          href="https://www.cssbuy.com/estimates"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="external-button"
-        >
-          Calculadora de frete CSSBuy
-          <span>↗</span>
-        </a>
-
-      </div>
-
-    </article>
-
-
-    <!-- ETAPA 03 -->
-    <article class="import-step">
-
-      <div class="step-number">03</div>
-
-      <div class="step-content">
-
-        <span class="step-label">IMPOSTOS</span>
-
-        <h3>Estimativa de tributação</h3>
-
-        <p>
-          Adicione a porcentagem estimada de tributação para visualizar
-          o custo final aproximado da importação.
-        </p>
-
-        <div class="formula">
-          Base tributável × % de imposto
+      <section class="import-section" id="calculadora">
+        <div class="import-header">
+          <span class="section-kicker">SPRITESHEET TOOLS</span>
+          <h2>Calculadora de Importação</h2>
+          <p>Faça uma estimativa dos custos da sua compra antes de importar.</p>
         </div>
 
-      </div>
+        <div class="import-steps">
+          <!-- ETAPA 01 -->
+          <article class="import-step">
+            <div class="step-number">01</div>
 
-    </article>
+            <div class="step-content">
+              <span class="step-label">COMPRA NA CHINA</span>
 
-  </div>
+              <h3>Valor inicial do produto</h3>
 
+              <p>
+                Primeiro você paga o produto, o frete interno da China e
+                possíveis taxas cobradas na compra.
+              </p>
 
-  <!-- CALCULADORA -->
+              <div class="formula">
+                Produto + Frete China + Taxas + Opcionais
+              </div>
+            </div>
+          </article>
 
-  <div class="calculator">
+          <!-- ETAPA 02 -->
+          <article class="import-step">
+            <div class="step-number">02</div>
 
-    <div class="calculator-top">
+            <div class="step-content">
+              <span class="step-label">WAREHOUSE</span>
 
-      <div>
-        <span class="step-label">ESTIMATIVA</span>
-        <h3>Calcule sua importação</h3>
-      </div>
+              <h3>Frete internacional</h3>
 
-      <button
-        type="button"
-        class="reset-calculator"
-        id="resetCalculator"
-      >
-        Limpar
-      </button>
+              <p>
+                Quando o produto chegar na warehouse, você terá o peso real e
+                poderá calcular o frete para o Brasil.
+              </p>
 
-    </div>
+              <a
+                href="https://www.cssbuy.com/estimates"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="external-button"
+              >
+                Calculadora de frete CSSBuy
+                <span>↗</span>
+              </a>
+            </div>
+          </article>
 
+          <!-- ETAPA 03 -->
+          <article class="import-step">
+            <div class="step-number">03</div>
 
-    <div class="calculator-grid">
+            <div class="step-content">
+              <span class="step-label">IMPOSTOS</span>
 
+              <h3>Estimativa de tributação</h3>
 
-      <!-- VALOR DO PRODUTO -->
+              <p>
+                Adicione a porcentagem estimada de tributação para visualizar o
+                custo final aproximado da importação.
+              </p>
 
-      <div class="calc-field">
-
-        <label for="productValue">
-          Valor do produto
-        </label>
-
-        <div class="input-money">
-          <span>R$</span>
-
-          <input
-            type="number"
-            id="productValue"
-            min="0"
-            step="0.01"
-            placeholder="193,47"
-          >
+              <div class="formula">Base tributável × % de imposto</div>
+            </div>
+          </article>
         </div>
 
-      </div>
+        <!-- CALCULADORA -->
 
+        <div class="calculator">
+          <div class="calculator-top">
+            <div>
+              <span class="step-label">ESTIMATIVA</span>
+              <h3>Calcule sua importação</h3>
+            </div>
 
-      <!-- FRETE NA CHINA -->
+            <button type="button" class="reset-calculator" id="resetCalculator">
+              Limpar
+            </button>
+          </div>
 
-      <div class="calc-field">
+          <div class="calculator-grid">
+            <!-- VALOR DO PRODUTO -->
 
-        <label for="chinaShipping">
-          Frete interno na China
-        </label>
+            <div class="calc-field">
+              <label for="productValue"> Valor do produto </label>
 
-        <div class="input-money">
-          <span>R$</span>
+              <div class="input-money">
+                <span>R$</span>
 
-          <input
-            type="number"
-            id="chinaShipping"
-            min="0"
-            step="0.01"
-            placeholder="0,00"
-          >
+                <input
+                  type="number"
+                  id="productValue"
+                  min="0"
+                  step="0.01"
+                  placeholder="193,47"
+                />
+              </div>
+            </div>
+
+            <!-- FRETE NA CHINA -->
+
+            <div class="calc-field">
+              <label for="chinaShipping"> Frete interno na China </label>
+
+              <div class="input-money">
+                <span>R$</span>
+
+                <input
+                  type="number"
+                  id="chinaShipping"
+                  min="0"
+                  step="0.01"
+                  placeholder="0,00"
+                />
+              </div>
+            </div>
+
+            <!-- TAXAS CHINESAS -->
+
+            <div class="calc-field">
+              <label for="chinaTax"> Taxas da compra </label>
+
+              <div class="input-money">
+                <span>R$</span>
+
+                <input
+                  type="number"
+                  id="chinaTax"
+                  min="0"
+                  step="0.01"
+                  placeholder="0,00"
+                />
+              </div>
+            </div>
+
+            <!-- OPCIONAIS -->
+
+            <div class="calc-field">
+              <label for="extras"> Serviços opcionais </label>
+
+              <div class="input-money">
+                <span>R$</span>
+
+                <input
+                  type="number"
+                  id="extras"
+                  min="0"
+                  step="0.01"
+                  placeholder="0,00"
+                />
+              </div>
+            </div>
+
+            <!-- FRETE INTERNACIONAL -->
+
+            <div class="calc-field">
+              <label for="internationalShipping"> Frete China → Brasil </label>
+
+              <div class="input-money">
+                <span>R$</span>
+
+                <input
+                  type="number"
+                  id="internationalShipping"
+                  min="0"
+                  step="0.01"
+                  placeholder="0,00"
+                />
+              </div>
+            </div>
+
+            <!-- TAXA -->
+
+            <div class="calc-field">
+              <label for="taxPercentage"> Estimativa de impostos </label>
+
+              <div class="input-money percentage">
+                <input
+                  type="number"
+                  id="taxPercentage"
+                  min="0"
+                  step="0.01"
+                  value="92"
+                />
+
+                <span>%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ESCOLHER BASE -->
+
+          <div class="tax-config">
+            <label class="checkbox-line">
+              <input type="checkbox" id="taxShipping" />
+
+              <span class="custom-check"></span>
+
+              <span>
+                Incluir frete internacional na base de cálculo dos impostos
+              </span>
+            </label>
+          </div>
+
+          <!-- RESULTADOS -->
+
+          <div class="calc-results">
+            <div class="result-row">
+              <span>Compra na China</span>
+
+              <strong id="chinaTotal"> R$ 0,00 </strong>
+            </div>
+
+            <div class="result-row">
+              <span>Frete internacional</span>
+
+              <strong id="shippingTotal"> R$ 0,00 </strong>
+            </div>
+
+            <div class="result-row">
+              <span>Base tributável</span>
+
+              <strong id="taxBase"> R$ 0,00 </strong>
+            </div>
+
+            <div class="result-row">
+              <span>Impostos estimados</span>
+
+              <strong id="taxTotal"> R$ 0,00 </strong>
+            </div>
+
+            <div class="result-divider"></div>
+
+            <div class="result-row total">
+              <div>
+                <span>CUSTO FINAL ESTIMADO</span>
+                <small>Produto + custos + frete + impostos</small>
+              </div>
+
+              <strong id="grandTotal"> R$ 0,00 </strong>
+            </div>
+          </div>
+
+          <div class="calculator-warning">
+            <span>!</span>
+
+            <p>
+              Esta ferramenta fornece apenas uma estimativa. Câmbio, impostos,
+              peso volumétrico, taxas da transportadora e regras de importação
+              podem alterar o valor final.
+            </p>
+          </div>
         </div>
+      </section>
 
-      </div>
-
-
-      <!-- TAXAS CHINESAS -->
-
-      <div class="calc-field">
-
-        <label for="chinaTax">
-          Taxas da compra
-        </label>
-
-        <div class="input-money">
-          <span>R$</span>
-
-          <input
-            type="number"
-            id="chinaTax"
-            min="0"
-            step="0.01"
-            placeholder="0,00"
-          >
-        </div>
-
-      </div>
-
-
-      <!-- OPCIONAIS -->
-
-      <div class="calc-field">
-
-        <label for="extras">
-          Serviços opcionais
-        </label>
-
-        <div class="input-money">
-          <span>R$</span>
-
-          <input
-            type="number"
-            id="extras"
-            min="0"
-            step="0.01"
-            placeholder="0,00"
-          >
-        </div>
-
-      </div>
-
-
-      <!-- FRETE INTERNACIONAL -->
-
-      <div class="calc-field">
-
-        <label for="internationalShipping">
-          Frete China → Brasil
-        </label>
-
-        <div class="input-money">
-          <span>R$</span>
-
-          <input
-            type="number"
-            id="internationalShipping"
-            min="0"
-            step="0.01"
-            placeholder="0,00"
-          >
-        </div>
-
-      </div>
-
-
-      <!-- TAXA -->
-
-      <div class="calc-field">
-
-        <label for="taxPercentage">
-          Estimativa de impostos
-        </label>
-
-        <div class="input-money percentage">
-          <input
-            type="number"
-            id="taxPercentage"
-            min="0"
-            step="0.01"
-            value="92"
-          >
-
-          <span>%</span>
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <!-- ESCOLHER BASE -->
-
-    <div class="tax-config">
-
-      <label class="checkbox-line">
-
-        <input
-          type="checkbox"
-          id="taxShipping"
-        >
-
-        <span class="custom-check"></span>
-
-        <span>
-          Incluir frete internacional na base de cálculo dos impostos
-        </span>
-
-      </label>
-
-    </div>
-
-
-    <!-- RESULTADOS -->
-
-    <div class="calc-results">
-
-
-      <div class="result-row">
-
-        <span>Compra na China</span>
-
-        <strong id="chinaTotal">
-          R$ 0,00
-        </strong>
-
-      </div>
-
-
-      <div class="result-row">
-
-        <span>Frete internacional</span>
-
-        <strong id="shippingTotal">
-          R$ 0,00
-        </strong>
-
-      </div>
-
-
-      <div class="result-row">
-
-        <span>Base tributável</span>
-
-        <strong id="taxBase">
-          R$ 0,00
-        </strong>
-
-      </div>
-
-
-      <div class="result-row">
-
-        <span>Impostos estimados</span>
-
-        <strong id="taxTotal">
-          R$ 0,00
-        </strong>
-
-      </div>
-
-
-      <div class="result-divider"></div>
-
-
-      <div class="result-row total">
-
+      <section id="sobre" class="about">
+        <div class="about-number">02</div>
         <div>
-          <span>CUSTO FINAL ESTIMADO</span>
-          <small>Produto + custos + frete + impostos</small>
+          <p class="eyebrow purple">ABOUT THE INDEX</p>
+          <h2>Links organizados.<br /><span>Visual limpo.</span></h2>
         </div>
+        <p>
+          Spritesheet funciona como um diretório visual: os cards levam
+          diretamente aos catálogos externos. O site não processa pedidos nem
+          pagamentos.
+        </p>
+      </section>
+    </main>
 
-        <strong id="grandTotal">
-          R$ 0,00
-        </strong>
+    <footer>
+      <a class="brand" href="#top">SPRITESHEET<span>.</span></a>
+      <p>© 2026 SPRITESHEET — CURATED DIRECTORY</p>
+      <a href="#top">VOLTAR AO TOPO ↑</a>
+    </footer>
 
-      </div>
-
-    </div>
-
-
-    <div class="calculator-warning">
-      <span>!</span>
-
-      <p>
-        Esta ferramenta fornece apenas uma estimativa. Câmbio, impostos,
-        peso volumétrico, taxas da transportadora e regras de importação
-        podem alterar o valor final.
-      </p>
-    </div>
-
-  </div>
-
-</section>
-
-    <section id="sobre" class="about">
-      <div class="about-number">02</div>
-      <div>
-        <p class="eyebrow purple">ABOUT THE INDEX</p>
-        <h2>Links organizados.<br><span>Visual limpo.</span></h2>
-      </div>
-      <p>Spritesheet funciona como um diretório visual: os cards levam diretamente aos catálogos externos. O site não processa pedidos nem pagamentos.</p>
-    </section>
-  </main>
-
-  <footer>
-    <a class="brand" href="#top">SPRITESHEET<span>.</span></a>
-    <p>© 2026 SPRITESHEET — CURATED DIRECTORY</p>
-    <a href="#top">VOLTAR AO TOPO ↑</a>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
